@@ -1,0 +1,31 @@
+<html>
+
+<html>
+<div  style="width: 100%; height: 100%; position: relative;">
+
+      <iframe id="ddd" src=""   width=100% height=100% frameborder="0" scrolling="no" seamless=""></iframe>
+
+      <div  onclick="location.href='https://www.google.co.in/';" style="z-index:4;width: 80px; height: 80px; position: absolute; right: 0px; top: 0px;" >
+<i class="fa fa-download"></i>
+</div>
+
+</div>
+<script LANGUAGE="JavaScript">
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+params = getParams();
+firstname = unescape(params["id"]);
+document.write("firstname = " + firstname + "<br>");
+document.getElementById("ddd").src="https://drive.google.com/file/d/"+firstname+"/preview";
+</script>
+</html>
