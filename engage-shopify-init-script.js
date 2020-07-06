@@ -1,3 +1,5 @@
+window.sqe = window.sqe || [];
+
 window.sqe.push(["init", {
     appId: "APP_1234",
     iconUrl: "https://picsum.photos/512",
